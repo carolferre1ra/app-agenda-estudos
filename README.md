@@ -2,23 +2,30 @@
 
 Aplicativo móvel para organizar horários de estudo, gerenciar matérias e acompanhar tarefas relacionadas às disciplinas. Desenvolvido em React Native com Expo.
 
-## Sobre o app
-O **Agenda de Estudos** ajuda estudantes a planejarem sessões de estudo e acompanharem tarefas por disciplina.
+## Sobre o Agenda de Estudos
 
-### Funcionalidades básicas (prioritárias)
-- [ ] Cadastro de disciplinas
-- [ ] Criação/edição/exclusão de sessões de estudo (data, início, fim)
-- [ ] Lista de tarefas por disciplina (CRUD)
-- [ ] Visualização da agenda do dia
+O **Agenda de Estudos** é um aplicativo desenvolvido para auxiliar estudantes na **organização dos estudos**, permitindo gerenciar disciplinas, sessões de estudo e tarefas de forma prática e visual.  
+O objetivo é facilitar o planejamento diário e o acompanhamento das atividades acadêmicas.
 
-### Funcionalidades adicionais (futuro)
+### Funcionalidades
+
+#### Funcionalidades básicas (prioritárias)
+- [x] Cadastro de disciplinas
+- [x] Criação de sessões de estudo (data, início, fim)
+- [ ] Edição de sessões de estudo
+- [ ] Exclusão de sessões de estudo
+- [x] Lista de tarefas por disciplina (CRUD parcial: criação e visualização)
+- [x] Visualização da agenda do dia
+
+#### Funcionalidades adicionais (trabalhos futuros)
 - [ ] Notificações locais para início de sessão
 - [ ] Integração com Google Calendar
 - [ ] Estatísticas de tempo estudado por disciplina
 
+
 ## Protótipos de Telas
 
-Protótipos criados no **Figma** para o AppAgenda.  
+Protótipos criados no **Figma** para o Agenda de Estudos.  
 As telas principais são: **Welcome**, **Dashboard (Agenda do Dia)**, **Tela de Disciplina**, **Formulário de Sessão** e **Tarefa**.
 
 🔗 [Acessar Protótipo no Figma](https://www.figma.com/design/LKuQnGxH2fDFO82WdcmvsM/App-agenda-estudos?node-id=0-1&t=gyZAggg9zXbUsFWE-1)
