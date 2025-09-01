@@ -30,27 +30,62 @@ As telas principais são: **Welcome**, **Dashboard (Agenda do Dia)**, **Tela de 
 
 🔗 [Acessar Protótipo no Figma](https://www.figma.com/design/LKuQnGxH2fDFO82WdcmvsM/App-agenda-estudos?node-id=0-1&t=gyZAggg9zXbUsFWE-1)
 
-## Modelagem do banco (3 pts)
-Modelo relacional usando **SQLite** (armazenamento local).
+## Modelagem do Banco (3 pts)
 
-Principais entidades:
-- `users` (id, name, email)
-- `subjects` (id, name, color, user_id)
-- `study_sessions` (id, subject_id, date, start_time, end_time, notes)
-- `tasks` (id, subject_id, description, due_date, completed)
+Modelo relacional usando **MySQL** (banco local ou remoto).
 
-Diagrama (exportado do draw.io):
-![Modelagem do banco](images/erd.png)
+O banco do AppAgenda possui as seguintes entidades principais:
 
-SQL de exemplo: `database/schema.sql`
+- **Users**:  
+  - `id` (PK, AUTO_INCREMENT)  
+  - `name` (VARCHAR, obrigatório)  
+  - `email` (VARCHAR, obrigatório)  
+  - Representa os usuários do aplicativo.
 
-## Planejamento de sprints (3 pts)
-| Sprint | Período | Atividades planejadas |
-|--------|---------|------------------------|
-| Sprint 1 | Semana 1 | Setup repo/Expo, README, protótipo inicial, modelagem do BD |
-| Sprint 2 | Semana 2 | CRUD de disciplinas e sessões, UI inicial |
-| Sprint 3 | Semana 3 | Tarefas, notificações (simulação), testes |
-| Sprint 4 | Semana 4 | Ajustes finais, estatísticas simples, entrega |
+- **Disciplina**:  
+  - `id_disciplina` (PK, AUTO_INCREMENT)  
+  - `nome` (VARCHAR, obrigatório)  
+  - `cor` (VARCHAR, opcional, para identificar visualmente a disciplina)  
+  - `user_id` (FK para Users)  
+  - Representa cada disciplina cadastrada por um usuário.
+
+- **Tarefa**:  
+  - `id_tarefa` (PK, AUTO_INCREMENT)  
+  - `id_disciplina` (FK para Disciplina)  
+  - `nome` (VARCHAR, obrigatório)  
+  - `descricao` (TEXT, opcional)  
+  - `data` (DATE)  
+  - `horario` (TIME)  
+  - `status` (ENUM: 'pendente', 'concluida', padrão 'pendente')  
+  - Representa tarefas vinculadas a uma disciplina.
+
+- **SessaoEstudo**:  
+  - `id_sessao` (PK, AUTO_INCREMENT)  
+  - `id_disciplina` (FK para Disciplina)  
+  - `nome` (VARCHAR, obrigatório)  
+  - `data` (DATE)  
+  - `hora_inicio` (TIME)  
+  - `hora_fim` (TIME)  
+  - Representa sessões de estudo associadas a uma disciplina.
+
+### Diagrama ER
+
+Diagrama exportado do draw.io mostrando as tabelas e seus relacionamentos:
+
+![Modelagem do Banco](imagens/Diagrama.png)
+
+
+## Planejamento de Sprints (3 pts)
+
+| Sprint   | Período   | Atividades planejadas |
+|----------|-----------|---------------------|
+| Sprint 1 | Semana 1  | - Configuração do repositório e ambiente Expo/React Native<br>- Criação do README inicial<br>- Protótipo das telas principais no Figma<br>- Modelagem do banco de dados (MySQL) e diagrama ER |
+| Sprint 2 | Semana 2  | - Implementação do CRUD de disciplinas<br>- Desenvolvimento da tela de Dashboard (agenda do dia)<br>- Criação da navegação entre telas principais |
+| Sprint 3 | Semana 3  | - Implementação do CRUD de sessões de estudo<br>- Conexão das sessões de estudo com o banco<br>- Testes iniciais das telas de disciplinas e sessões |
+| Sprint 4 | Semana 4  | - Implementação do CRUD de tarefas por disciplina<br>- Funcionalidade de marcar tarefas como pendentes/concluídas<br>- Testes das funcionalidades de tarefas |
+| Sprint 5 | Semana 5  | - Ajustes de UI/UX (cores, ícones, layouts)<br>- Simulação de notificações locais para início de sessão<br>- Implementação de validações e mensagens de erro nos formulários |
+| Sprint 6 | Semana 6  | - Implementação de estatísticas simples de tempo estudado<br>- Revisão completa do protótipo e funcionalidades<br>- Testes finais e correções<br>- Preparação para entrega e documentação final |
+
 
 ## Autor
 - Caroline Ferreira
