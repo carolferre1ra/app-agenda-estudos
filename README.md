@@ -16,13 +16,12 @@ O **Agenda de Estudos** ajuda estudantes a planejarem sessões de estudo e acomp
 - [ ] Integração com Google Calendar
 - [ ] Estatísticas de tempo estudado por disciplina
 
-## Protótipos de tela (3 pts)
-Protótipos criados no Figma — telas principais: Welcome, Dashboard, Tela de Disciplina, Form de Sessão.
+## Protótipos de Telas
 
-🔗 Link público do protótipo no Figma: `COLE_AQUI_O_LINK_DO_FIGMA`
+Protótipos criados no **Figma** para o AppAgenda.  
+As telas principais são: **Welcome**, **Dashboard (Agenda do Dia)**, **Tela de Disciplina**, **Formulário de Sessão** e **Tarefa**.
 
-Ou imagem do mapa de telas:
-![Mapa de telas](images/prototipo.png)
+🔗 [Acessar Protótipo no Figma](https://www.figma.com/design/LKuQnGxH2fDFO82WdcmvsM/App-agenda-estudos?node-id=0-1&t=gyZAggg9zXbUsFWE-1)
 
 ## Modelagem do banco (3 pts)
 Modelo relacional usando **SQLite** (armazenamento local).
