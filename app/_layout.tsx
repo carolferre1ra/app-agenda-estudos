@@ -10,6 +10,8 @@ export default function Layout() {
       }}
     >
       <Stack.Screen name="index" options={{ title: 'Agenda Estudos' }} />
+      {/* hide somente o header da rota login */}
+      <Stack.Screen name="login" options={{ headerShown: false }} />
     </Stack>
   );
 }
