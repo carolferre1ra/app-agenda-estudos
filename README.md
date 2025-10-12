@@ -84,7 +84,7 @@ Diagrama exportado do draw.io mostrando as tabelas e seus relacionamentos:
 
 | Sprint   | Período   | Atividades planejadas |
 |----------|-----------|---------------------|
-| Sprint 1 | Semana 1  | - Configuração do repositório e ambiente Expo/React Native<br>- Criação do README inicial<br>- Protótipo das telas principais no Figma<br>- Modelagem do banco de dados (SQLite) e diagrama ER |
+| Sprint 1 | Semana 1  | - Configuração do repositório e ambiente Expo/React Native<br>✅- Criação do README inicial<br>✅- Protótipo das telas principais no Figma✅<br>- Modelagem do banco de dados (SQLite) e diagrama ER✅ |
 | Sprint 2 | Semana 2  | - Implementação do CRUD de disciplinas ✅<br>- Desenvolvimento da tela de Dashboard (agenda do dia) ✅<br>- Criação da navegação entre telas principais ✅ |
 | Sprint 3 | Semana 3  | - Implementação do CRUD de sessões de estudo<br>- Conexão das sessões de estudo com o banco ✅ (SQLite local)<br>- Testes iniciais das telas de disciplinas e sessões |
 | Sprint 4 | Semana 4  | - Implementação do CRUD de tarefas por disciplina<br>- Funcionalidade de marcar tarefas como pendentes/concluídas<br>- Testes das funcionalidades de tarefas |
